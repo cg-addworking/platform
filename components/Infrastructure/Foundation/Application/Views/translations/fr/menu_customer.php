@@ -1,0 +1,26 @@
+<?php
+
+return [
+    'dashboard'           => 'Tableau de bord',
+    'my_vendors'          => "Mes Prestataires",
+    'passworks'           => "Passworks",
+    'outbound_invoices'   => "Factures AddWorking",
+    'business_codes'      => "Codes métiers",
+    'enterprise'          => "Entreprise",
+    'my_enterprise'       => "Mon Entreprise",
+    'my_invitations'      => "Mes Invitations",
+    'my_contracts'        => "Mes contrats (bêta)",
+    'my_work_fields'      => "Mes chantiers",
+    'offers'              => "Appel d'offre",
+    'mission_referential' => "Référentiel missions",
+    'mission_offers'      => "Offres de missions",
+    'mission_proposals'   => "Proposition de mission",
+    'missions'            => "Missions",
+    'purchase_ordres'     => "Bons de commande",
+    'mission_trackings'   => "Suivi de missions",
+    'others'              => "Autre",
+    'folders'             => "Dossiers",
+    'invoices'            => "Factures",
+    'exports'             => "Exports",
+    'inbound_invoices'    => "Factures prestataires",
+];

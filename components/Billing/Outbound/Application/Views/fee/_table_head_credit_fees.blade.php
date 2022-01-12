@@ -1,0 +1,8 @@
+@th(__('billing.outbound.application.views.fee._table_head_credit_fees.number').'|not_allowed')
+@th(__('billing.outbound.application.views.fee._table_head_credit_fees.label')."|not_allowed")
+@th(__('billing.outbound.application.views.fee._table_head_credit_fees.type')."|not_allowed")
+@th(__('billing.outbound.application.views.fee._table_head_credit_fees.service_provider')."|not_allowed")
+@th(__('billing.outbound.application.views.fee._table_head_credit_fees.tax_amount_invoice_line')."|not_allowed|class:text-right")
+@th(__('billing.outbound.application.views.fee._table_head_credit_fees.amount')."|not_allowed|class:text-right")
+@th(__('billing.outbound.application.views.fee._table_head_credit_fees.vat_rate')."|not_allowed|class:text-center")
+@th(__('billing.outbound.application.views.fee._table_head_credit_fees.actions')."|not_allowed|class:text-right")

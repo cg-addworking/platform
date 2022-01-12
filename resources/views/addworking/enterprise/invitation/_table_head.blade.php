@@ -1,0 +1,5 @@
+@th(__('addworking.enterprise.invitation._table_head.guest').'|column:guest_id')
+@th(__('addworking.enterprise.invitation._table_head.email').'|column:email')
+@th(__('addworking.enterprise.invitation._table_head.status').'|column:status')
+@th(__('addworking.enterprise.invitation._table_head.type').'|column:type')
+@th(__('addworking.enterprise.invitation._table_head.actions').'|not_allowed')

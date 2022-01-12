@@ -1,0 +1,40 @@
+.sticker {
+    display: inline-block;
+    padding: 1em;
+    border: .3em double white;
+    line-height: 1em;
+    text-align: center;
+    border-radius: 99em;
+    box-sizing: border-box;
+    font-size: 250%;
+
+    &.sticker-primary {
+        color: darken($brand-primary, 10%);
+        background-color: $brand-primary;
+    }
+
+    &.sticker-success {
+        color: $brand-success;
+        background-color: $state-success-bg;
+    }
+
+    &.sticker-info {
+        color: $brand-info;
+        background-color: $state-info-bg;
+    }
+
+    &.sticker-warning {
+        color: $brand-warning;
+        background-color: $state-warning-bg;
+    }
+
+    &.sticker-danger {
+        color: $brand-danger;
+        background-color: $state-danger-bg;
+    }
+
+    i.fa {
+        width: 1em;
+        height: 1em;
+    }
+}

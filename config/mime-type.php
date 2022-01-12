@@ -1,0 +1,57 @@
+<?php
+
+return [
+    'Audio' => [
+        'audio/mpeg',
+        'audio/x-ms-wma',
+        'audio/vnd.rn-realaudio',
+        'audio/x-wav',
+    ],
+    'Images' =>  [
+        'image/gif',
+        'image/jpeg',
+        'image/png',
+        'image/tiff',
+        'image/vnd.microsoft.icon',
+        'image/vnd.djvu',
+        'image/svg+xml',
+    ],
+    'Textes'=>  [
+        'text/css',
+        'text/csv',
+        'text/html',
+        'text/plain',
+        'text/xml',
+    ],
+    'Vidéos' =>  [
+        'video/mpeg',
+        'video/mp4',
+        'video/quicktime',
+        'video/x-msvideo',
+        'video/x-flv',
+        'video/webm',
+    ],
+    'applications diverses' =>  [
+        'application/vnd.oasis.opendocument.text',
+        'application/vnd.oasis.opendocument.spreadsheet',
+        'application/vnd.oasis.opendocument.presentation',
+        'application/vnd.ms-excel',
+        'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
+        'application/vnd.ms-powerpoint',
+        'application/vnd.openxmlformats-officedocument.presentationml.presentation',
+        'application/msword',
+        'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
+        'application/vnd.mozilla.xul+xml',
+        'application/EDI-X12',
+        'application/EDIFACT',
+        'application/octet-stream',
+        'application/ogg',
+        'application/pdf',
+        'application/xhtml+xml',
+        'application/x-shockwave-flash',
+        'application/json',
+        'application/ld+json',
+        'application/xml',
+        'application/zip',
+    ]
+];

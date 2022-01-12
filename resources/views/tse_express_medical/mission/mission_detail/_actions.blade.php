@@ -1,0 +1,1 @@
+@actions($mission_detail)

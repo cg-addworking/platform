@@ -1,0 +1,21 @@
+includes:
+    - ./vendor/nunomaduro/larastan/extension.neon
+
+parameters:
+
+    paths:
+        - app
+        - components
+        - config
+
+    # The level 8 is the highest level
+    level: 0
+
+    ignoreErrors:
+            - '#on Laravel collection, but could have been retrieved as a query#'
+            - '#but return statement is missing#'
+
+    checkMissingIterableValueType: false
+
+    parallel:
+    		maximumNumberOfProcesses: 2

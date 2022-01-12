@@ -1,0 +1,112 @@
+
+// Body
+$body-bg: #f5f8fa;
+
+// Borders
+$laravel-border-color: darken($body-bg, 10%);
+$list-group-border: $laravel-border-color;
+$navbar-default-border: $laravel-border-color;
+$panel-default-border: $laravel-border-color;
+$panel-inner-border: $laravel-border-color;
+$border_grey : #d4d9e3;
+$border_blue : #1da5cd;
+
+// Brands
+$brand-primary: #3097D1;
+$brand-second : #282929;
+$brand-info: #8eb4cb;
+$brand-success: #2ab27b;
+$brand-warning: #cbb956;
+$brand-danger: #bf5329;
+$blue : #00b8f0;
+$orange : #ff744f;
+$bleu : #1da5cd;
+$black : #2d2d2d;
+$white : #ffffff;
+
+// Typography
+$icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
+$font-family-sans-serif: "Roboto", sans-serif;
+$font-size-base: 14px;
+$line-height-base: 1.6;
+$text-color: #38424b;
+
+// Navbar
+$navbar-default-bg: #fff;
+
+// Buttons
+$btn-default-color: $text-color;
+
+// Inputs
+$input-border: lighten($text-color, 40%);
+$input-border-focus: lighten($brand-primary, 25%);
+$input-color-placeholder: lighten($text-color, 30%);
+
+// Panels
+$panel-default-heading-bg: #fff;
+
+// ----------------------------------------------------------------------------
+// Breakpoints
+// ----------------------------------------------------------------------------
+
+@mixin breakpoint($point) {
+   @if $point == desktop{
+    @media (min-width: 1200px) {
+       @content;
+    }
+  }
+  @else if $point == laptop {
+     @media (max-width: 1199px){
+      @content;
+    }
+  }
+  @else if $point == tablet {
+     @media (max-width: 992px){
+      @content;
+    }
+  }
+  @else if $point == phablet {
+     @media (max-width: 767px){
+      @content;
+    }
+  }
+  @else if $point == mobileonly {
+     @media (max-width: 543px){
+      @content;
+    }
+  }
+}
+
+// ----------------------------------------------------------------------------
+// Keyframes
+// ----------------------------------------------------------------------------
+
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@-moz-keyframes spin {
+  from {
+    -moz-transform: rotate(0deg);
+  }
+
+  to {
+    -moz-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}

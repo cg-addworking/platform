@@ -1,0 +1,8 @@
+@th(__('addworking.components.billing.outbound.received_payment.table_head.number')."|not_allowed|class:text-center")
+@th(__('addworking.components.billing.outbound.received_payment.table_head.bank_reference')."|not_allowed")
+@th(__('addworking.components.billing.outbound.received_payment.table_head.invoices')."|not_allowed")
+@th(__('addworking.components.billing.outbound.received_payment.table_head.received_at')."|not_allowed|class:text-center")
+@th(__('addworking.components.billing.outbound.received_payment.table_head.iban')."|not_allowed")
+@th(__('addworking.components.billing.outbound.received_payment.table_head.bic')."|not_allowed")
+@th(__('addworking.components.billing.outbound.received_payment.table_head.amount')."|not_allowed|class:text-right")
+@th(__('addworking.components.billing.outbound.received_payment.buttons.actions')."|not_allowed|class:text-right")

@@ -1,0 +1,1 @@
+@link($outbound_invoice)

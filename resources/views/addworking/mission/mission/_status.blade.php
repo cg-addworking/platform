@@ -1,0 +1,1 @@
+<span class="text-muted">{{ __("mission.mission.status_{$mission->status}") }}</span>

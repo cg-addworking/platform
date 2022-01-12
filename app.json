@@ -1,0 +1,166 @@
+{
+    "name": "Addworking",
+    "description": "The Addworking web platform",
+    "keywords": [
+        "Risk Management Platform",
+        "Web Platform",
+        "Laravel"
+    ],
+    "website": "https://app.addworking.com",
+    "repository": "https://github.com/Addworking/App",
+    "logo": "http://www.addworking.com/sites/default/files/logo_addworking_2_1.png",
+    "success_url": "/login",
+    "scripts": {
+        "postdeploy": "php artisan db:seed && php artisan migrate"
+    },
+    "env": {
+        "APP_ENV": "review",
+        "LOGIN_PASSWORD_CHECK": "false",
+        "APP_DEBUG": {
+            "required": true
+        },
+        "APP_KEY": {
+            "required": true
+        },
+        "APP_URL": {
+            "required": true
+        },
+        "APP_LOG": {
+            "required": true
+        },
+        "MAIL_DRIVER": {
+            "required": true
+        },
+        "MAIL_FROM_ADDRESS": {
+            "required": true
+        },
+        "MAIL_FROM_NAME": {
+            "required": true
+        },
+        "MAIL_HOST": {
+            "required": true
+        },
+        "MAIL_PASSWORD": {
+            "required": true
+        },
+        "MAIL_USERNAME": {
+            "required": true
+        },
+        "MAIL_PORT": {
+            "required": true
+        },
+        "QUEUE_DRIVER": {
+            "required": true
+        },
+        "REDIS_URL": {
+            "required": true
+        },
+        "SIGNINHUB_ENABLED": {
+            "required": true
+        },
+        "SESSION_DRIVER": {
+            "required": true
+        },
+        "COMPOSER_AUTH": {
+            "required": true
+        },
+        "AWS_DATA_LAKE_KEY": {
+            "required": true
+        },
+        "AWS_DATA_LAKE_SECRET": {
+            "required": true
+        },
+        "AWS_DATA_LAKE_REGION": {
+            "required": true
+        },
+        "AWS_DATA_LAKE_BUCKET": {
+            "required": true
+        },
+        "TINYMCE_API_KEY": {
+            "required": true
+        },
+        "AWS_FILES_KEY": {
+            "required": true
+        },
+        "AWS_FILES_SECRET": {
+            "required": true
+        },
+        "AWS_FILES_REGION": {
+            "required": true
+        },
+        "AWS_FILES_BUCKET": {
+            "required": true
+        },
+        "FILE_STORAGE_DISK": {
+            "required": true
+        },
+        "YOUSIGN_ENVIRONMENT": {
+            "required": true
+        },
+        "YOUSIGN_API_KEY": {
+            "required": true
+        },
+        "YOUSIGN_UI_INTERFACE_APP": {
+            "required": true
+        },
+        "YOUSIGN_TEST_EMAIL_ROOT": {
+            "required": true
+        },
+        "YOUSIGN_TEST_PHONE_NUMBER": {
+            "required": true
+        },
+        "YOUSIGN_CONTRACT_ENABLED": {
+            "required": true
+        },
+        "LOGGING_APP_USER_ACTION": {
+            "required": true
+        },
+        "LOGGING_APP_QUEUE_JOB": {
+            "required": true
+        },
+        "AWS_SQS_KEY": {
+            "required": true
+        },
+        "AWS_SQS_SECRET": {
+            "required": true
+        },
+        "AWS_SQS_REGION": {
+            "required": true
+        },
+        "AWS_SQS_QUEUE": {
+            "required": true
+        },
+        "AWS_SQS_QUEUE_PREFIX": {
+            "required": true
+        }
+    },
+    "environments": {
+        "test": {
+            "env": {
+                "APP_ENV": "testing",
+                "APP_KEY": "base64:RXvgiJ8ltG4+lte8GBtvlYjXTVMhWznEbJ3LyHoBDiI=",
+                "SIGNINHUB_ENABLED": "0",
+                "MAIL_DRIVER": "log",
+                "QUEUE_DRIVER": "sync"
+            },
+            "scripts": {
+                "test": "bin/ci.sh"
+            }
+        }
+    },
+    "formation": {},
+    "addons": [
+        "heroku-postgresql",
+        "heroku-redis",
+        "scheduler"
+    ],
+    "buildpacks": [{
+        "url": "heroku/php"
+    },{
+        "url": "heroku/nodejs"
+    },{
+        "url": "https://github.com/heroku/heroku-buildpack-google-chrome"
+    },{
+        "url": "https://github.com/stomita/heroku-buildpack-phantomjs"
+    }]
+}

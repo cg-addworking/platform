@@ -1,0 +1,28 @@
+
+#profile-index {
+    .picture {
+        display: inline-block;
+        width: 100px;
+        height: 100px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-color: white;
+    }
+
+    h2 {
+        margin-top: 2.5em;
+    }
+
+    h3 {
+        margin-top: 0;
+        margin-bottom: 1em;
+    }
+}
+
+#profile-account-type {
+    button[type="submit"] {
+        padding-top: 4em;
+        padding-bottom: 4em;
+        height: 10em;
+    }
+}

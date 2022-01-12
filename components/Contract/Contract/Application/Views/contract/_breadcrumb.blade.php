@@ -1,0 +1,61 @@
+@switch($page ?? 'index')
+    @case('create')
+        @breadcrumb_item(__('components.contract.contract.application.views.contract._breadcrumb.dashboard')."|href:".route('dashboard'))
+        @if(auth()->user()->isSupport())
+            @breadcrumb_item(__('components.contract.contract.application.views.contract._breadcrumb.index')."|href:".route('support.contract.index'))
+        @else
+            @breadcrumb_item(__('components.contract.contract.application.views.contract._breadcrumb.index')."|href:".route('contract.index'))
+        @endif
+        @if(isset($contract_parent))
+            @breadcrumb_item(__('components.contract.contract.application.views.contract._breadcrumb.create_amendment')."|active")
+        @else
+            @breadcrumb_item(__('components.contract.contract.application.views.contract._breadcrumb.create')."|active")
+        @endif
+    @break
+    @case('create_without_model')
+        @breadcrumb_item(__('components.contract.contract.application.views.contract._breadcrumb.dashboard')."|href:".route('dashboard'))
+        @if(auth()->user()->isSupport())
+            @breadcrumb_item(__('components.contract.contract.application.views.contract._breadcrumb.index')."|href:".route('support.contract.index'))
+        @else
+            @breadcrumb_item(__('components.contract.contract.application.views.contract._breadcrumb.index')."|href:".route('contract.index'))
+        @endif
+            @breadcrumb_item(__('components.contract.contract.application.views.contract._breadcrumb.create')."|active")
+    @break
+    @case('create_without_model_to_sign')
+        @breadcrumb_item(__('components.contract.contract.application.views.contract._breadcrumb.dashboard')."|href:".route('dashboard'))
+        @if(auth()->user()->isSupport())
+            @breadcrumb_item(__('components.contract.contract.application.views.contract._breadcrumb.index')."|href:".route('support.contract.index'))
+        @else
+            @breadcrumb_item(__('components.contract.contract.application.views.contract._breadcrumb.index')."|href:".route('contract.index'))
+        @endif
+            @breadcrumb_item(__('components.contract.contract.application.views.contract._breadcrumb.create')."|active")
+    @break
+    @case('edit')
+        @breadcrumb_item(__('components.contract.contract.application.views.contract._breadcrumb.dashboard')."|href:".route('dashboard'))
+        @if(auth()->user()->isSupport())
+            @breadcrumb_item(__('components.contract.contract.application.views.contract._breadcrumb.index')."|href:".route('support.contract.index'))
+        @else
+            @breadcrumb_item(__('components.contract.contract.application.views.contract._breadcrumb.index')."|href:".route('contract.index'))
+        @endif
+        @breadcrumb_item(__('components.contract.contract.application.views.contract._breadcrumb.show', ['number' => $contract->getNumber()])."|href:".route('contract.show', $contract))
+        @breadcrumb_item(__('components.contract.contract.application.views.contract._breadcrumb.edit')."|active")
+    @break
+    @case('show')
+        @breadcrumb_item(__('components.contract.contract.application.views.contract._breadcrumb.dashboard')."|href:".route('dashboard'))
+        @if(auth()->user()->isSupport())
+            @breadcrumb_item(__('components.contract.contract.application.views.contract._breadcrumb.index')."|href:".route('support.contract.index'))
+        @else
+            @breadcrumb_item(__('components.contract.contract.application.views.contract._breadcrumb.index')."|href:".route('contract.index'))
+        @endif
+        @breadcrumb_item(__('components.contract.contract.application.views.contract._breadcrumb.show', ['number' => $contract->getNumber()])."|active")
+    @break
+    @case('sign')
+        @breadcrumb_item(__('components.contract.contract.application.views.contract._breadcrumb.dashboard')."|href:".route('dashboard'))
+        @breadcrumb_item(__('components.contract.contract.application.views.contract._breadcrumb.index')."|href:".route('contract.index'))
+        @breadcrumb_item(__('components.contract.contract.application.views.contract._breadcrumb.show', ['number' => $contract->getNumber()])."|href:".route('contract.show', $contract))
+        @breadcrumb_item(__('components.contract.contract.application.views.contract._breadcrumb.sign')."|active")
+        @break
+    @default
+        @breadcrumb_item(__('components.contract.contract.application.views.contract._breadcrumb.dashboard')."|href:".route('dashboard'))
+        @breadcrumb_item(__('components.contract.contract.application.views.contract._breadcrumb.index')."|active")
+@endswitch

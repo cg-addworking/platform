@@ -1,0 +1,6 @@
+@th(__('common.infrastructure.export.application.views.export._table_head.name')."|not_allowed")
+@th(__('common.infrastructure.export.application.views.export._table_head.status')."|not_allowed")
+@th(__('common.infrastructure.export.application.views.export._table_head.filters')."|not_allowed")
+@th(__('common.infrastructure.export.application.views.export._table_head.finished_at')."|not_allowed")
+@th(__('common.infrastructure.export.application.views.export._table_head.created_at')."|not_allowed")
+@th(__('common.infrastructure.export.application.views.export._table_head.actions')."|not_allowed|class:text-right")

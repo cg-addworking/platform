@@ -1,0 +1,5 @@
+@th(__('document_type_model::document_type_model._table_head.number')."|not_allowed")
+@th(__('document_type_model::document_type_model._table_head.display_name')."|not_allowed")
+@th(__('document_type_model::document_type_model._table_head.published')."|not_allowed")
+@th(__('document_type_model::document_type_model._table_head.description')."|not_allowed")
+@th(__('document_type_model::document_type_model._table_head.actions')."|not_allowed|class:text-right")

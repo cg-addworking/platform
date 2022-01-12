@@ -1,0 +1,1 @@
+@include('addworking.mission.mission._status', ['mission' => $purchase_order->mission])

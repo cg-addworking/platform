@@ -1,0 +1,130 @@
+body {
+  overflow-x: hidden;
+}
+
+.page-wrapper {
+    min-height: 100%;
+    padding-left: 50px;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+
+    .sidebar-wrapper {
+        position: fixed;
+        left: 250px;
+        width: 50px;
+        height: 100%;
+        margin-left: -250px;
+        overflow-x: hidden;
+        overflow-y: auto;
+        background: #000;
+        -webkit-transition: all 0.5s ease;
+        -moz-transition: all 0.5s ease;
+        -o-transition: all 0.5s ease;
+        transition: all 0.5s ease;
+
+        .navbar {
+            position: absolute;
+            top: 0;
+            width: 250px;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+        }
+
+        .sidebar-menu {
+            li {
+                border-bottom: 1px solid $gray-dark;
+
+                a {
+                    color: $gray-lighter;
+                    line-height: 3.5em;
+
+                    i.fa, img {
+                        margin-right: 1.5em;
+                    }
+
+                    &:hover, &:active, &:focus {
+                        color: $brand-primary;
+                        background: $navbar-inverse-bg;
+                    }
+                }
+
+                ul {
+                    background-color: darken($navbar-inverse-bg, 20%);
+                    list-style-type: none;
+                    padding-left: 0;
+
+                    li {
+                        border-bottom: none;
+
+                        a {
+                            display: block;
+                            padding: 0 15px;
+                            color: darken($gray-lighter, 20%);
+                            font-weight: 300;
+                            line-height: 3.5em;
+
+                            &:hover, &:active, &:focus {
+                                text-decoration: none;
+                                color: $brand-primary;
+                                background: darken($navbar-inverse-bg, 20%);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .top-menu {
+        border-left: none;
+        border-right: none;
+        border-top: none;
+        border-radius: 0;
+        background: white;
+
+        .navbar-nav li a {
+            line-height: 3.5em;
+            color: $addworking-blue;
+            font-weight: bold;
+            font-size: 12px;
+            font-family: "Open Sans", Arial, sans-serif;
+            text-transform: uppercase;
+        }
+
+        a.navbar-brand {
+            line-height: 3.5em;
+            font-size: 12px;
+
+            img {
+                height: 3.5em;
+            }
+        }
+    }
+
+    .content-wrapper {
+        .page-title h1 {
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+    }
+
+    &.toggled {
+        padding-left: 250px;
+
+        .sidebar-wrapper {
+            width: 250px;
+        }
+    }
+
+    &.hide-menu {
+        padding-left: 0;
+
+        .sidebar-wrapper {
+            width: 0;
+        }
+    }
+}

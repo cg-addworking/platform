@@ -1,0 +1,23 @@
+.nav-pills {
+    &> li.has-error {
+        &> a, &> a:hover, &> a:focus {
+            color: $brand-danger;
+        }
+    }
+
+    &> li.active.has-error {
+        &> a, &> a:hover, &> a:focus {
+            color: white;
+            font-weight: bold;
+            background-color: $brand-danger;
+        }
+    }
+}
+
+.wizard {
+    .wizard-header {
+        .nav {
+            background: white;
+        }
+    }
+}

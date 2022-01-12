@@ -1,0 +1,27 @@
+
+#enterprise-edit-documents {
+    .file-panel {
+        .panel-body {
+            min-height: 250px;
+        }
+
+        .panel-footer {
+            background: white;
+            border-top: none;
+        }
+    }
+
+    label {
+        font-weight: normal;
+        margin-bottom: 1em;
+    }
+}
+
+#enterprise-vendors {
+    table thead th {
+        font-weight: normal;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+    }
+}

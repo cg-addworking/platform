@@ -1,0 +1,8 @@
+@th(__('components.contract.model.application.views.contract_model_variable._table_head.name')."|not_allowed")
+@th(__('components.contract.model.application.views.contract_model_variable._table_head.display_name')."|not_allowed")
+@th(__('components.contract.model.application.views.contract_model_variable._table_head.party_denomination')."|not_allowed")
+@th(__('components.contract.model.application.views.contract_model_variable._table_head.part_name')."|not_allowed")
+@th(__('components.contract.model.application.views.contract_model_variable._table_head.description')."|not_allowed")
+@th(__('components.contract.model.application.views.contract_model_variable._table_head.default_value')."|not_allowed")
+@th(__('components.contract.model.application.views.contract_model_variable._table_head.required')."|not_allowed")
+@th(__('components.contract.model.application.views.contract_model_variable._table_head.input_type')."|not_allowed")

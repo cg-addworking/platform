@@ -1,0 +1,1 @@
+@actions($proposal_response)

@@ -1,0 +1,1 @@
+{{ $address->one_line }}

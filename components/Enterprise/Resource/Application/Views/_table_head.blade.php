@@ -1,0 +1,5 @@
+@th(__('enterprise.resource.application.views._table_head.last_name')."|not_allowed|column:last_name")
+@th(__('enterprise.resource.application.views._table_head.first_name')."|not_allowed|column:first_name")
+@th(__('enterprise.resource.application.views._table_head.email')."|not_allowed|column:email")
+@th(__('enterprise.resource.application.views._table_head.status')."|not_allowed|column:status|class:text-center")
+@th(__('enterprise.resource.application.views._table_head.action')."|not_allowed|class:text-right")

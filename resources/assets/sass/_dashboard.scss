@@ -1,0 +1,405 @@
+
+#dashboard {
+    div.col-md-12 a.kpi:nth-child(n+5) {
+        display: none;
+    }
+
+    a.kpi {
+        display: inline-block;
+        width: 25%;
+        float: left;
+        transition: all 0.5s ease;
+        color: white;
+        text-align: center;
+        padding: 20px 0;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 20px;
+
+        &:nth-child(1) { background: $color-blue-1; }
+        &:nth-child(2) { background: $color-blue-2; }
+        &:nth-child(3) { background: $color-blue-3; }
+        &:nth-child(4) { background: $color-blue-4; }
+
+        &:nth-child(1).red { background: $color-red-1; }
+        &:nth-child(2).red { background: $color-red-2; }
+        &:nth-child(3).red { background: $color-red-3; }
+        &:nth-child(4).red { background: $color-red-4; }
+
+        &:nth-child(1):hover { background: #282929; }
+        &:nth-child(2):hover { background: #282929; }
+        &:nth-child(3):hover { background: #282929; }
+        &:nth-child(4):hover { background: #282929; }
+
+        &:hover {
+            text-decoration: none;
+        }
+
+        &[disabled] {
+            cursor: not-allowed;
+        }
+
+        &[disabled]:hover {
+            opacity: .5;
+        }
+
+        :after {
+            content: "";
+            clear: both;
+        }
+
+        i.fa {
+            font-size: 64px;
+            margin: 10px 0;
+        }
+
+        span {
+            display: block;
+            font-size: 32px;
+            font-weight: 300;
+        }
+    }
+
+    a.card {
+        position: relative;
+        display: inline-block;
+        width: 25%;
+        float: left;
+        color: white;
+        text-align: center;
+        padding: 70px 0 20px 0;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 20px;
+        margin-top: 70px;
+
+        &:nth-child(1) { background: $color-green-1; img { border: 6px solid $color-green-1 }}
+        &:nth-child(2) { background: $color-green-2; img { border: 6px solid $color-green-2 }}
+        &:nth-child(3) { background: $color-green-3; img { border: 6px solid $color-green-3 }}
+        &:nth-child(4) { background: $color-green-4; img { border: 6px solid $color-green-4 }}
+
+        div.logo {
+            width: 100%;
+            position: absolute;
+            top: -50px;
+            text-align: center;
+        }
+
+        div.text {
+            position: relative;
+
+            span {
+                display: inline-block;
+                float: left;
+
+                &:nth-child(1) {
+                    width: 30%;
+                    text-align: right;
+                    font-size: 32px;
+                    line-height: 32px;
+                }
+
+                &:nth-child(2) {
+                    width: 10%;
+                    text-align: center;
+                    font-size: 32px;
+                    line-height: 32px;
+                    font-weight: 300;
+                }
+
+                &:nth-child(3) {
+                    width: 60%;
+                    text-align: left;
+                    font-size: 16px;
+                    line-height: 16px;
+                }
+            }
+
+            :after {
+                content: "";
+                clear: both;
+            }
+        }
+    }
+}
+
+
+
+
+
+.dashboard {
+    margin-bottom: 3em;
+    font-family: $font-regular;
+    color: $color-text-1;
+    .line:not(:first-child){
+        margin-top: 2em;
+    }
+    .encart {
+        -webkit-box-shadow: 6px 6px 26px -7px rgba(0,0,0,0.18);
+        -moz-box-shadow: 6px 6px 26px -7px rgba(0,0,0,0.18);
+        box-shadow: 6px 6px 26px -7px rgba(0,0,0,0.18);
+        background: $color-white;
+    }
+    .bloc_contenu{
+        text-align: center;
+        font-size: 12px;
+        padding: 1em;
+        background: $color-white;
+    }
+    .thematique{
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 20px;
+        margin-bottom: -4px;
+        .number{
+            font-size: 45px;
+            font-family: "dinot_black";
+        }
+    }
+    img.icon_cta {
+         margin-right: 7px;
+    }
+    .detail_numbers {
+        .bloc {
+            padding: 1em 0 1em 0;
+            margin-top: 3em;
+        }
+        a.detail_link {
+            color: $color-text-1;
+            text-decoration: none;
+            background: #F5F5F5;
+            display: block;
+            transition: 0.6s;
+            &.disabled {
+                pointer-events: none;
+                opacity: 0.4;
+            }
+            .number {
+                font-size: 30px;
+                margin: -7px;
+                font-weight: bold;
+            }
+            .status {
+                font-size: 13px;
+                line-height: 15px;
+            }
+            .rounded_arrow {
+                width: 25px;
+                background: #D8D8D8;
+                border-radius: 100%;
+                height: 25px;
+                color: #ffffff;
+                padding-top: 2px;
+                font-size: 13px;
+                transition: 0.6s;
+                margin: auto;
+            }
+        }
+        a.detail_link:hover {
+            background: $color-second;
+            transition: 0.6s;
+            color: $color-white;
+            .rounded_arrow {
+                background: $color-white;
+                color: $color-second;
+                transition: 0.6s;
+            }
+        }
+    }
+    .client {
+        .bloc_illu {
+            overflow: hidden;
+            text-align: right;
+            padding-top: 1em;
+            background: url("/img/dashboard/illu_client.png") no-repeat center $color-client;
+            height: 130px;
+            background-size: 84%;
+            background-position: 67px 16px;
+            img{
+                width: 220px;
+                margin-right: -25px;
+            }
+        }
+        .thematique {
+            color: $color-client;
+        }
+    }
+    .mission {
+        .bloc_contenu {
+            padding-right: 40px;
+        }
+        .thematique {
+            color: $color-mission;
+            padding-top: 10px;
+        }
+        .bloc_illu{
+            background: url("/img/dashboard/illu_mission.png") no-repeat center $color-mission;
+            background-size: 70%;
+            background-position: 57px 81px;
+        }
+    }
+    .facture {
+        .bloc_illu{
+            background: url("/img/dashboard/illu_facture.png") no-repeat center $color-facture;
+            background-size: 100%;
+            background-position: 26px 90px;
+        }
+        .thematique {
+            color: $color-facture;
+        }
+        .bloc_contenu {
+            padding-right: 2.5em;
+            padding-left: 0;
+        }
+    }
+
+    .alerts {
+        padding: 1.5em;
+        text-align: center;
+        .notifications {
+            .icon-notification {
+                font-size: 35px;
+            }
+        }
+        .messages {
+            .icon-message {
+                font-size: 30px;
+            }
+        }
+        .info {
+            font-size: 17px;
+            margin-bottom: -6px;
+            margin-top: -8px;
+            .number {
+                font-family: $font-black;
+                font-size: 21px;
+            }
+        }
+    }
+
+    //à retirer en utilisant match-height
+    .mission .bloc_illu, .mission.encart, .client.encart, .facture .bloc_illu, .facture.encart, .encart.alerts  {
+        height: 300px;
+    }
+}
+
+
+@media screen and (max-width: 640px) {
+    .dashboard {
+        .client {
+            .bloc_illu {
+                background: url(/img/dashboard/illu_client-xs.png) no-repeat center #0C90AF;
+                height: 80px;
+                -webkit-background-size: 70px;
+                background-size: 70px;
+            }
+            &.encart {
+                padding-bottom: 2em;
+                margin-bottom: 2em;
+            }
+
+        }
+        .mission {
+            .bloc_contenu {
+                padding-bottom: 20px;
+            }
+            .bloc_illu {
+                background: url(/img/dashboard/illu_mission-xs.png) no-repeat center #41C1CE;
+                height: 80px;
+                -webkit-background-size: 60px;
+                background-size: 60px;
+            }
+        }
+        .facture {
+            .bloc_contenu {
+                padding-right: inherit;
+                padding-left: inherit;
+                padding-bottom: 20px;
+            }
+
+            .bloc_illu {
+                background: url(/img/dashboard/illu_facture-xs.png) no-repeat center #85D9ED;
+                height: 80px;
+                -webkit-background-size: 60px;
+                background-size: 60px;
+            }
+        }
+        .client.encart, .mission.encart, .facture.encart, .encart.alerts {
+            height: auto;
+        }
+        .detail_numbers .bloc {
+            margin-top: 1em;
+        }
+        .bloc_contenu {
+            padding: inherit;
+        }
+        .mission .bloc_contenu {
+            padding-right: inherit;
+        }
+        .alerts {
+            &.encart {
+                margin-top: 2em;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 641px) and (max-width: 991px) {
+    .dashboard {
+        .client.encart {
+            height: 160px;
+            .bloc_illu {
+                height: 160px;
+                background: url(/img/dashboard/illu_client-sm.png) no-repeat center #0C90AF;
+                background-size: 217px;
+                background-position: 58px 38px;
+            }
+            .bloc_contenu {
+                height: 236px;
+            }
+            .thematique {
+                padding-top: 30px;
+            }
+
+        }
+        .mission  {
+            .bloc_illu {
+                height: 395px;
+                background-size: 118px;
+                background-position: 29px 147px;
+                margin-right: -30px;
+            }
+            .bloc_contenu {
+                height: 395px;
+            }
+        }
+        .facture  {
+            .bloc_illu {
+                height: 385px;
+                background-size: 137px;
+                background-position: 22px 148px;
+                margin-right: -30px;
+            }
+            .detail_numbers .bloc {
+                margin-top: 1em;
+            }
+            .bloc_contenu {
+                height: 385px;
+                padding-right: inherit;
+                padding-left: inherit;
+            }
+        }
+
+        .alerts {
+            &.encart {
+                height: 385px;
+                padding-top: 3.3em;
+            }
+        }
+
+        .detail_numbers .bloc {
+            margin-top: 1em;
+        }
+
+    }
+}

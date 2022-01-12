@@ -1,0 +1,5 @@
+@th(__('components.contract.model.application.views.contract_model_document_type._table_head.created_at')."|not_allowed")
+@th(__('components.contract.model.application.views.contract_model_document_type._table_head.document_type')."|not_allowed")
+@th(__('components.contract.model.application.views.contract_model_document_type._table_head.validation_by')."|not_allowed|class:text-center")
+@th(__('components.contract.model.application.views.contract_model_document_type._table_head.validation_required')."|not_allowed|class:text-center")
+@th(__('components.contract.model.application.views.contract_model_document_type._table_head.actions')."|not_allowed|class:text-right")

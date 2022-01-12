@@ -1,0 +1,3 @@
+{{ $document_type->display_name }} @can('download', $document_type->file)<a href="{{ $document_type->file->routes->download }}">({{ __('addworking.enterprise.document_type._summary.download_model') }})</a>@endcan<br>
+<small class="text-muted">{{__("addworking.enterprise.document_type._summary.{$document_type->type}")}} @if ($document_type->isMandatory()) <span class="text-danger">{{ __('addworking.enterprise.document_type._summary.mandatory') }}</span> @else {{ __('addworking.enterprise.document_type._summary.optional') }} @endif {{ __('addworking.enterprise.document_type._summary.ask_by') }} : <span class="font-weight-bold">{{ $document_type->enterprise->name }}</span></small><br>
+<small class="text-muted">{{ $document_type->description }}</small>

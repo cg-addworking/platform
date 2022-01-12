@@ -1,0 +1,11 @@
+CIS/code;CIS/indice;CIS/actif;CIS/raison sociale;CIS/groupe;GROUPE FOURNISSEUR/libellé;CIS/ville;CIS/code postal;CIS/telephone;CIS/email commande;CIS/rang;CIS/année;CIS/ca;CIS/typologie;CIS/AL (O/N);CIS/date enquête coface (dernière);CIS/note coface (dernière);CIS/date enquête coface (précédente);CIS/note coface (précédente);CIS/qualifié nucléaire;CIS/volume adressable commande importante (O/N);CIS/volume adressable moyenne commande (O/N);CIS/volume adressable petite commande (O/N)
+PT5094801;0;O;JUSTSERVICES;999;N'APPARTIENT PAS A UN GROUPE                      ;NAMUR;5000;351 229 446 096;geral@justservices.pt;1;;;ST;N;;;;;;N;N;N
+PT5134068;0;O;BYONFIBER ENGENEERING;999;GROUPE B                      ;BAIAO;;351 910 999 492;global@byonfiber.com;1;2015;;ST;N;;;;;;N;N;N
+RO1209607;0;O;GREEN SEAS INTERNATIONAL SRL;999;N'APPARTIENT PAS A UN GROUPE                      ;CONSTANTA;;08 36 65 65 65;;1;;;ST;N;;;;;;N;N;N
+RO1561085;0;O;TEHMABAT;999;N'APPARTIENT PAS A UN GROUPE                      ;300290 TIMISOARA ROMANIA;;0040 256 206 341;carmen.cuc@tehmabat.ro;1;;;ST;;;;;;;N;O;O
+RO1633802;0;O;ADG DESIGN;999;GROUPE A                      ;ILFOV;;0040 314 011 937;andreea.mihai@adgdesign.ro;1;;;P3;;;;;;;N;N;N
+RO2841614;0;O;ROMA2S INGENIERIE;999;N'APPARTIENT PAS A UN GROUPE                      ;PITESTI;;0040 348 407 510;;1;;;P3;N;;;;;;N;N;N
+SA5210000;0;O;EURO SYSTEMS - KSA BRANCHE;999;N'APPARTIENT PAS A UN GROUPE                      ;12831-7760 RIYADH;;+966(0)12065398;hamad.khodr@euro-system.fr;1;;;ST;N;;;;;;N;N;N
+SK2020288;0;O;ELECTRIK SRO;999;N'APPARTIENT PAS A UN GROUPE                      ;BRATISLAVA;;0042 12 50 30 30 10;;1;;;ST;N;;;;;;N;N;N
+SK2022064;0;O;TANDEM SK S.R.O.;999;GROUPE A                     ;84105 BRATISLAVA;;00421 905 793 942;;1;;;ST;N;;;;;;N;N;N
+US1206686;0;O;WAVETRONIX;999;N'APPARTIENT PAS A UN GROUPE                      ;PROVO;;213 253 3493;;1;;;F1;N;;;;;;N;N;N

@@ -1,0 +1,33 @@
+
+#auth-login,
+#auth-register,
+#auth-passwords-email,
+#auth-passwords-reset,
+#auth-activation {
+    min-height: 100%;
+    background-image: url('/img/login_background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    .panel {
+        margin-top: 5em;
+
+        .panel-heading {
+            text-align: center;
+            font-weight: bold;
+            line-height: 3.5em;
+        }
+
+        .panel-body {
+            background-color: #f6f7fa;
+        }
+    }
+
+    &.page-wrapper {
+        padding-left: 0;
+    }
+
+    nav.sidebar-menu {
+        display: none;
+    }
+}

@@ -1,0 +1,1 @@
+@actions($outbound_invoice)

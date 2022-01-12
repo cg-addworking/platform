@@ -1,0 +1,1 @@
+<textarea name="{{ dot_to_input($name) }}" id="{{ $id ?? uniqid('textarea_') }}" class="form-control" rows="{{ $rows ?? 3 }}" placeholder="{{ $placeholder ?? '' }}" {{ ($required ?? false) ? ' required' : '' }}>{{ old($name, $value ?? $slot ?: null) }}</textarea>

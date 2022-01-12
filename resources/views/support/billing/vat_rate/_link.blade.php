@@ -1,0 +1,1 @@
+@link($vat_rate)

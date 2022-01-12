@@ -1,0 +1,20 @@
+.alterable {
+    cursor: pointer;
+
+    .alterable-content {
+        line-height: 30px; /** height of input-group-sm **/
+
+        .alterable-button {
+            float: right;
+            opacity: .3;
+        }
+
+        &:hover .alterable-button {
+            opacity: 1;
+        }
+
+        &:hover .alterable-value {
+            text-decoration: underline;
+        }
+    }
+}

@@ -1,0 +1,700 @@
+default:
+  extensions:
+    Behat\BootstrapExtension\Extension:
+      bootstrap_file: '%paths.base%/behat-conf.php'
+    Liuggio\Fastest\Behat\ListFeaturesExtension\Extension: ~
+
+  suites:
+    manage_member:
+      paths: ['%paths.base%/tests/Behavior/Addworking/Enterprise/Member']
+      contexts:
+        - Tests\Behavior\Addworking\Enterprise\Member\ManageEnterpriseMemberContext
+
+    manage_invitation:
+      paths: ['%paths.base%/tests/Behavior/Addworking/Enterprise/Invitation']
+      contexts:
+        - Tests\Behavior\Addworking\Enterprise\Invitation\ManageEnterpriseInvitationContext
+
+    manage_legal_form:
+      paths: ['%paths.base%/tests/Behavior/Addworking/Enterprise/LegalForm']
+      contexts:
+        - Tests\Behavior\Addworking\Enterprise\LegalForm\ManageLegalFormContext
+
+    add_doc_type:
+      paths: ['%paths.base%/tests/Behavior/Addworking/Enterprise/Document']
+      contexts:
+        - Tests\Behavior\Addworking\Enterprise\Document\AddDocTypeContext
+
+    list_docs_in_folder:
+      paths: ['%paths.base%/tests/Behavior/Addworking/Common/Folder']
+      contexts:
+        - Tests\Behavior\Addworking\Common\Folder\ListDocsInFolderContext
+
+    create_outbound_invoice:
+      paths: ['%paths.base%/components/Billing/Outbound/Tests/Acceptance/CreateOutboundInvoice']
+      contexts:
+        - Components\Billing\Outbound\Tests\Acceptance\CreateOutboundInvoice\CreateOutboundInvoiceContext
+
+    list_outbound_invoice_for_support:
+      paths: ['%paths.base%/components/Billing/Outbound/Tests/Acceptance/ListOutboundInvoiceForSupport']
+      contexts:
+        - Components\Billing\Outbound\Tests\Acceptance\ListOutboundInvoiceForSupport\ListOutboundInvoiceForSupportContext
+
+    list_outbound_invoice:
+      paths: ['%paths.base%/components/Billing/Outbound/Tests/Acceptance/ListOutboundInvoice']
+      contexts:
+        - Components\Billing\Outbound\Tests\Acceptance\ListOutboundInvoice\ListOutboundInvoiceContext
+
+    validate_outbound_invoice:
+      paths: ['%paths.base%/components/Billing/Outbound/Tests/Acceptance/ValidateOutboundInvoice']
+      contexts:
+        - Components\Billing\Outbound\Tests\Acceptance\ValidateOutboundInvoice\ValidateOutboundInvoiceContext
+
+    associate_inbound_invoice_to_outbound_invoice:
+      paths: ['%paths.base%/components/Billing/Outbound/Tests/Acceptance/AssociateInboundInvoiceToOutboundInvoice']
+      contexts:
+        - Components\Billing\Outbound\Tests\Acceptance\AssociateInboundInvoiceToOutboundInvoice\AssociateInboundInvoiceToOutboundInvoiceContext
+
+    dissociate_inbound_invoice_from_outbound_invoice:
+      paths: ['%paths.base%/components/Billing/Outbound/Tests/Acceptance/DissociateInboundInvoiceFromOutboundInvoice']
+      contexts:
+        - Components\Billing\Outbound\Tests\Acceptance\DissociateInboundInvoiceFromOutboundInvoice\DissociateInboundInvoiceFromOutboundInvoiceContext
+
+    add_ad_hoc_line_to_outbound_invoice:
+      paths: ['%paths.base%/components/Billing/Outbound/Tests/Acceptance/AddAdHocLineToOutboundInvoice']
+      contexts:
+        - Components\Billing\Outbound\Tests\Acceptance\AddAdHocLineToOutboundInvoice\AddAdHocLineToOutboundInvoiceContext
+
+    generate_outbound_invoice_file:
+      paths: ['%paths.base%/components/Billing/Outbound/Tests/Acceptance/GenerateOutboundInvoiceFile']
+      contexts:
+        - Components\Billing\Outbound\Tests\Acceptance\GenerateOutboundInvoiceFile\GenerateOutboundInvoiceFileContext
+
+    calculate_addworking_fees:
+      paths: ['%paths.base%/components/Billing/Outbound/Tests/Acceptance/CalculateAddworkingFees']
+      contexts:
+        - Components\Billing\Outbound\Tests\Acceptance\CalculateAddworkingFees\CalculateAddworkingFeesContext
+
+    create_addworking_fees:
+      paths: ['%paths.base%/components/Billing/Outbound/Tests/Acceptance/CreateAddworkingFees']
+      contexts:
+        - Components\Billing\Outbound\Tests\Acceptance\CreateAddworkingFees\CreateAddworkingFeesContext
+
+    publish_outbound_invoice:
+      paths: ['%paths.base%/components/Billing/Outbound/Tests/Acceptance/PublishOutboundInvoice']
+      contexts:
+        - Components\Billing\Outbound\Tests\Acceptance\PublishOutboundInvoice\PublishOutboundInvoiceContext
+
+    unpublish_outbound_invoice:
+      paths: ['%paths.base%/components/Billing/Outbound/Tests/Acceptance/UnpublishOutboundInvoice']
+      contexts:
+        - Components\Billing\Outbound\Tests\Acceptance\UnpublishOutboundInvoice\UnpublishOutboundInvoiceContext
+
+    show_outbound_invoice:
+      paths: ['%paths.base%/components/Billing/Outbound/Tests/Acceptance/ShowOutboundInvoice']
+      contexts:
+        - Components\Billing\Outbound\Tests\Acceptance\ShowOutboundInvoice\ShowOutboundInvoiceContext
+
+    create_credit_line:
+      paths: ['%paths.base%/components/Billing/Outbound/Tests/Acceptance/CreateCreditLine']
+      contexts:
+        - Components\Billing\Outbound\Tests\Acceptance\CreateCreditLine\CreateCreditLineContext
+
+    create_credit_note:
+      paths: ['%paths.base%/components/Billing/Outbound/Tests/Acceptance/CreateCreditNote']
+      contexts:
+        - Components\Billing\Outbound\Tests\Acceptance\CreateCreditNote\CreateCreditNoteContext
+
+    list_invoice_parameters:
+      paths: ['%paths.base%/components/Enterprise/InvoiceParameter/Tests/Acceptance/ListInvoiceParameter']
+      contexts:
+        - Components\Enterprise\InvoiceParameter\Tests\Acceptance\ListInvoiceParameter\ListInvoiceParameterContext
+
+    create_credit_addworking_fees:
+      paths: ['%paths.base%/components/Billing/Outbound/Tests/Acceptance/CreateCreditAddworkingFees']
+      contexts:
+        - Components\Billing\Outbound\Tests\Acceptance\CreateCreditAddworkingFees\CreateCreditAddworkingFeesContext
+
+    delete_ad_hoc_line_from_outbound_invoice:
+      paths: ['%paths.base%/components/Billing/Outbound/Tests/Acceptance/DeleteAdHocLineFromOutboundInvoice']
+      contexts:
+        - Components\Billing\Outbound\Tests\Acceptance\DeleteAdHocLineFromOutboundInvoice\DeleteAdHocLineFromOutboundInvoiceContext
+
+    edit_outbound_invoice:
+      paths: ['%paths.base%/components/Billing/Outbound/Tests/Acceptance/EditOutboundInvoice']
+      contexts:
+        - Components\Billing\Outbound\Tests\Acceptance\EditOutboundInvoice\EditOutboundInvoiceContext
+
+    delete_credit_addworking_fees_from_credit_note:
+      paths: ['%paths.base%/components/Billing/Outbound/Tests/Acceptance/DeleteCreditAddworkingFeesFromCreditNote']
+      contexts:
+        - Components\Billing\Outbound\Tests\Acceptance\DeleteCreditAddworkingFeesFromCreditNote\DeleteCreditAddworkingFeesFromCreditNoteContext
+
+    create_payment_order:
+      paths: ['%paths.base%/components/Billing/PaymentOrder/Tests/Acceptance/CreatePaymentOrder']
+      contexts:
+        - Components\Billing\PaymentOrder\Tests\Acceptance\CreatePaymentOrder\CreatePaymentOrderContext
+
+    list_payment_order:
+      paths: ['%paths.base%/components/Billing/PaymentOrder/Tests/Acceptance/ListPaymentOrder']
+      contexts:
+        - Components\Billing\PaymentOrder\Tests\Acceptance\ListPaymentOrder\ListPaymentOrderContext
+
+    edit_payment_order:
+      paths: ['%paths.base%/components/Billing/PaymentOrder/Tests/Acceptance/EditPaymentOrder']
+      contexts:
+        - Components\Billing\PaymentOrder\Tests\Acceptance\EditPaymentOrder\EditPaymentOrderContext
+
+    show_payment_order:
+      paths: ['%paths.base%/components/Billing/PaymentOrder/Tests/Acceptance/ShowPaymentOrder']
+      contexts:
+        - Components\Billing\PaymentOrder\Tests\Acceptance\ShowPaymentOrder\ShowPaymentOrderContext
+
+    associate_invoice_to_payment_order:
+      paths: ['%paths.base%/components/Billing/PaymentOrder/Tests/Acceptance/AssociateInvoiceToPaymentOrder']
+      contexts:
+        - Components\Billing\PaymentOrder\Tests\Acceptance\AssociateInvoiceToPaymentOrder\AssociateInvoiceToPaymentOrderContext
+
+    generate_payment_order_file:
+      paths: ['%paths.base%/components/Billing/PaymentOrder/Tests/Acceptance/GeneratePaymentOrderFile']
+      contexts:
+        - Components\Billing\PaymentOrder\Tests\Acceptance\GeneratePaymentOrderFile\GeneratePaymentOrderFileContext
+
+    dissociate_invoice_from_payment_order:
+      paths: ['%paths.base%/components/Billing/PaymentOrder/Tests/Acceptance/DissociateInvoiceFromPaymentOrder']
+      contexts:
+        - Components\Billing\PaymentOrder\Tests\Acceptance\DissociateInvoiceFromPaymentOrder\DissociateInvoiceFromPaymentOrderContext
+
+    mark_payment_order_as_paid:
+      paths: ['%paths.base%/components/Billing/PaymentOrder/Tests/Acceptance/MarkPaymentOrderAsPaid']
+      contexts:
+        - Components\Billing\PaymentOrder\Tests\Acceptance\MarkPaymentOrderAsPaid\MarkPaymentOrderAsPaidContext
+
+    delete_payment_order:
+      paths: ['%paths.base%/components/Billing/PaymentOrder/Tests/Acceptance/DeletePaymentOrder']
+      contexts:
+        - Components\Billing\PaymentOrder\Tests\Acceptance\DeletePaymentOrder\DeletePaymentOrderContext
+
+    create_received_payment:
+      paths: ['%paths.base%/components/Billing/PaymentOrder/Tests/Acceptance/CreateReceivedPayment']
+      contexts:
+        - Components\Billing\PaymentOrder\Tests\Acceptance\CreateReceivedPayment\CreateReceivedPaymentContext
+
+    list_received_payment:
+      paths: ['%paths.base%/components/Billing/PaymentOrder/Tests/Acceptance/ListReceivedPayment']
+      contexts:
+        - Components\Billing\PaymentOrder\Tests\Acceptance\ListReceivedPayment\ListReceivedPaymentContext
+
+    list_received_payment_as_support:
+      paths: [ '%paths.base%/components/Billing/PaymentOrder/Tests/Acceptance/ListReceivedPaymentAsSupport' ]
+      contexts:
+        - Components\Billing\PaymentOrder\Tests\Acceptance\ListReceivedPaymentAsSupport\ListReceivedPaymentAsSupportContext
+
+    edit_received_payment:
+      paths: ['%paths.base%/components/Billing/PaymentOrder/Tests/Acceptance/EditReceivedPayment']
+      contexts:
+        - Components\Billing\PaymentOrder\Tests\Acceptance\EditReceivedPayment\EditReceivedPaymentContext
+
+    create_activity_report:
+      paths: [ '%paths.base%/components/Enterprise/ActivityReport/Tests/Acceptance/CreateActivityReport' ]
+      contexts:
+        - Components\Enterprise\ActivityReport\Tests\Acceptance\CreateActivityReport\CreateActivityReportContext
+
+    list_documents_of_an_enterprise:
+      paths: ['%paths.base%/tests/Behavior/Addworking/Enterprise/Document/']
+      contexts:
+        - Tests\Behavior\Addworking\Enterprise\Document\ListDocumentsOfAnEnterpriseContext
+
+    create_empty_contract_model:
+      paths: [ '%paths.base%/components/Contract/Model/Tests/Acceptance/CreateEmptyContractModel' ]
+      contexts:
+        - Components\Contract\Model\Tests\Acceptance\CreateEmptyContractModel\CreateEmptyContractModelContext
+
+    edit_contract_model:
+      paths: [ '%paths.base%/components/Contract/Model/Tests/Acceptance/EditContractModel' ]
+      contexts:
+        - Components\Contract\Model\Tests\Acceptance\EditContractModel\EditContractModelContext
+
+    delete_contract_model:
+      paths: [ '%paths.base%/components/Contract/Model/Tests/Acceptance/DeleteContractModel' ]
+      contexts:
+        - Components\Contract\Model\Tests\Acceptance\DeleteContractModel\DeleteContractModelContext
+
+    list_contract_model_as_support:
+      paths: [ '%paths.base%/components/Contract/Model/Tests/Acceptance/ListContractModel' ]
+      contexts:
+        - Components\Contract\Model\Tests\Acceptance\ListContractModel\ListContractModelAsSupportContext
+
+    show_contract_model:
+      paths: [ '%paths.base%/components/Contract/Model/Tests/Acceptance/ShowContractModel' ]
+      contexts:
+        - Components\Contract\Model\Tests\Acceptance\ShowContractModel\ShowContractModelContext
+
+    delete_contract_model_party:
+      paths: [ '%paths.base%/components/Contract/Model/Tests/Acceptance/DeleteContractModelParty' ]
+      contexts:
+        - Components\Contract\Model\Tests\Acceptance\DeleteContractModelParty\DeleteContractModelPartyContext
+
+    define_document_type_for_contract_model:
+      paths: [ '%paths.base%/components/Contract/Model/Tests/Acceptance/DefineDocumentTypeForContractModel' ]
+      contexts:
+        - Components\Contract\Model\Tests\Acceptance\DefineDocumentTypeForContractModel\DefineDocumentTypeForContractModelContext
+
+    delete_document_type_for_contract_model:
+      paths: [ '%paths.base%/components/Contract/Model/Tests/Acceptance/DeleteDocumentTypeForContractModel' ]
+      contexts:
+        - Components\Contract\Model\Tests\Acceptance\DeleteDocumentTypeForContractModel\DeleteDocumentTypeForContractModelContext
+
+    list_document_type_for_contract_model:
+      paths: [ '%paths.base%/components/Contract/Model/Tests/Acceptance/ListDocumentTypeOfContractModelParty' ]
+      contexts:
+        - Components\Contract\Model\Tests\Acceptance\ListDocumentTypeOfContractModelParty\ListDocumentTypeOfContractModelPartyContext
+
+    create_contract_model_part:
+      paths: [ '%paths.base%/components/Contract/Model/Tests/Acceptance/CreateContractModelPart' ]
+      contexts:
+        - Components\Contract\Model\Tests\Acceptance\CreateContractModelPart\CreateContractModelPartContext
+
+    list_contract_model_part:
+      paths: [ '%paths.base%/components/Contract/Model/Tests/Acceptance/ListContractModelPart' ]
+      contexts:
+        - Components\Contract\Model\Tests\Acceptance\ListContractModelPart\ListContractModelPartContext
+
+    edit_contract_model_part:
+      paths: [ '%paths.base%/components/Contract/Model/Tests/Acceptance/EditContractModelPart' ]
+      contexts:
+        - Components\Contract\Model\Tests\Acceptance\EditContractModelPart\EditContractModelPartContext
+
+    edit_contract_validators:
+      paths: [ '%paths.base%/components/Contract/Contract/Tests/Acceptance/EditContractValidators' ]
+      contexts:
+        - Components\Contract\Contract\Tests\Acceptance\EditContractValidators\EditContractValidatorsContext
+
+    # --------------------------------------------------------------------------
+    # Components\Enterprise\Enterprise
+    # --------------------------------------------------------------------------
+    check_compliance:
+      paths: [ '%paths.base%/components/Enterprise/Enterprise/Tests/Acceptance/CheckCompliance' ]
+      contexts:
+        - Components\Enterprise\Enterprise\Tests\Acceptance\CheckCompliance\CheckComplianceContext
+
+    list_enterprises_as_support:
+      paths: [ '%paths.base%/components/Enterprise/Enterprise/Tests/Acceptance/ListEnterprisesAsSupport' ]
+      contexts:
+        - Components\Enterprise\Enterprise\Tests\Acceptance\ListEnterprisesAsSupport\ListEnterprisesAsSupportContext
+
+    delete_contract_model_part:
+      paths: [ '%paths.base%/components/Contract/Model/Tests/Acceptance/DeleteContractModelPart' ]
+      contexts:
+        - Components\Contract\Model\Tests\Acceptance\DeleteContractModelPart\DeleteContractModelPartContext
+
+    publish_contract_model:
+      paths: [ '%paths.base%/components/Contract/Model/Tests/Acceptance/PublishContractModel' ]
+      contexts:
+        - Components\Contract\Model\Tests\Acceptance\PublishContractModel\PublishContractModelContext
+
+    list_contract_model_variable:
+      paths: [ '%paths.base%/components/Contract/Model/Tests/Acceptance/ListContractModelVariable' ]
+      contexts:
+        - Components\Contract\Model\Tests\Acceptance\ListContractModelVariable\ListContractModelVariableContext
+
+    list_inbound_invoices_as_customer:
+      paths: [ '%paths.base%/components/Billing/Inbound/Tests/Acceptance/ListInboundInvoicesAsCustomer' ]
+      contexts:
+        - Components\Billing\Inbound\Tests\Acceptance\ListInboundInvoicesAsCustomer\ListInboundInvoicesAsCustomerContext
+
+    create_invoice_parameter:
+      paths: [ '%paths.base%/components/Enterprise/InvoiceParameter/Tests/Acceptance/CreateInvoiceParameter' ]
+      contexts:
+        - Components\Enterprise\InvoiceParameter\Tests\Acceptance\CreateInvoiceParameter\CreateInvoiceParameterContext
+
+    edit_invoice_parameter:
+      paths: [ '%paths.base%/components/Enterprise/InvoiceParameter/Tests/Acceptance/EditInvoiceParameter' ]
+      contexts:
+        - Components\Enterprise\InvoiceParameter\Tests\Acceptance\EditInvoiceParameter\EditInvoiceParameterContext
+
+    create_contract:
+      paths: [ '%paths.base%/components/Contract/Contract/Tests/Acceptance/CreateContract' ]
+      contexts:
+        - Components\Contract\Contract\Tests\Acceptance\CreateContract\CreateContractContext
+
+    create_amendment:
+      paths: [ '%paths.base%/components/Contract/Contract/Tests/Acceptance/CreateAmendment' ]
+      contexts:
+        - Components\Contract\Contract\Tests\Acceptance\CreateAmendment\CreateAmendmentContext
+
+    edit_contract:
+      paths: [ '%paths.base%/components/Contract/Contract/Tests/Acceptance/EditContract' ]
+      contexts:
+        - Components\Contract\Contract\Tests\Acceptance\EditContract\EditContractContext
+
+    list_contract:
+      paths: [ '%paths.base%/components/Contract/Contract/Tests/Acceptance/ListContract' ]
+      contexts:
+        - Components\Contract\Contract\Tests\Acceptance\ListContract\ListContractContext
+
+    list_contract_as_support:
+      paths: [ '%paths.base%/components/Contract/Contract/Tests/Acceptance/ListContractAsSupport' ]
+      contexts:
+        - Components\Contract\Contract\Tests\Acceptance\ListContractAsSupport\ListContractAsSupportContext
+
+    identify_contract_party:
+      paths: [ '%paths.base%/components/Contract/Contract/Tests/Acceptance/IdentifyParty' ]
+      contexts:
+        - Components\Contract\Contract\Tests\Acceptance\IdentifyParty\IdentifyPartyContext
+
+    identify_contract_validator:
+      paths: [ '%paths.base%/components/Contract/Contract/Tests/Acceptance/IdentifyValidator' ]
+      contexts:
+        - Components\Contract\Contract\Tests\Acceptance\IdentifyValidator\IdentifyValidatorContext
+
+    delete_contract:
+      paths: [ '%paths.base%/components/Contract/Contract/Tests/Acceptance/DeleteContract' ]
+      contexts:
+        - Components\Contract\Contract\Tests\Acceptance\DeleteContract\DeleteContractContext
+
+    edit_contract_model_variable:
+      paths: [ '%paths.base%/components/Contract/Model/Tests/Acceptance/EditContractModelVariable' ]
+      contexts:
+        - Components\Contract\Model\Tests\Acceptance\EditContractModelVariable\EditContractModelVariableContext
+
+    show_contract:
+      paths: [ '%paths.base%/components/Contract/Contract/Tests/Acceptance/ShowContract' ]
+      contexts:
+        - Components\Contract\Contract\Tests\Acceptance\ShowContract\ShowContractContext
+
+    list_contract_party:
+      paths: [ '%paths.base%/components/Contract/Contract/Tests/Acceptance/ListContractParty' ]
+      contexts:
+        - Components\Contract\Contract\Tests\Acceptance\ListContractParty\ListContractPartyContext
+
+    define_contract_variable_value:
+      paths: [ '%paths.base%/components/Contract/Contract/Tests/Acceptance/DefineContractVariableValue' ]
+      contexts:
+        - Components\Contract\Contract\Tests\Acceptance\DefineContractVariableValue\DefineContractVariableValueContext
+
+    list_contract_variable:
+      paths: [ '%paths.base%/components/Contract/Contract/Tests/Acceptance/ListContractVariable' ]
+      contexts:
+        - Components\Contract\Contract\Tests\Acceptance\ListContractVariable\ListContractVariableContext
+
+    list_contract_party_document:
+      paths: [ '%paths.base%/components/Contract/Contract/Tests/Acceptance/ListContractPartyDocument' ]
+      contexts:
+        - Components\Contract\Contract\Tests\Acceptance\ListContractPartyDocument\ListContractPartyDocumentContext
+
+    generate_contract:
+      paths: [ '%paths.base%/components/Contract/Contract/Tests/Acceptance/GenerateContract']
+      contexts:
+        - Components\Contract\Contract\Tests\Acceptance\GenerateContract\GenerateContractContext
+
+    create_contract_part:
+      paths: [ '%paths.base%/components/Contract/Contract/Tests/Acceptance/CreateContractPart']
+      contexts:
+        - Components\Contract\Contract\Tests\Acceptance\CreateContractPart\CreateContractPartContext
+
+    edit_contract_part:
+      paths: [ '%paths.base%/components/Contract/Contract/Tests/Acceptance/EditContractPart']
+      contexts:
+        - Components\Contract\Contract\Tests\Acceptance\EditContractPart\EditContractPartContext
+
+    delete_contract_part:
+      paths: [ '%paths.base%/components/Contract/Contract/Tests/Acceptance/DeleteContractPart']
+      contexts:
+        - Components\Contract\Contract\Tests\Acceptance\DeleteContractPart\DeleteContractPartContext
+
+    duplicate_contract_model:
+      paths: [ '%paths.base%/components/Contract/Model/Tests/Acceptance/DuplicateContractModel']
+      contexts:
+        - Components\Contract\Model\Tests\Acceptance\DuplicateContractModel\DuplicateContractModelContext
+
+    create_contract_without_model:
+      paths: [ '%paths.base%/components/Contract/Contract/Tests/Acceptance/CreateContractWithoutModel']
+      contexts:
+        - Components\Contract\Contract\Tests\Acceptance\CreateContractWithoutModel\CreateContractWithoutModelContext
+
+    calculate_contract_state:
+      paths: [ '%paths.base%/components/Contract/Contract/Tests/Acceptance/CalculateContractState' ]
+      contexts:
+        - Components\Contract\Contract\Tests\Acceptance\CalculateContractState\CalculateContractStateContext
+
+    download_contract:
+      paths: [ '%paths.base%/components/Contract/Contract/Tests/Acceptance/DownloadContract' ]
+      contexts:
+        - Components\Contract\Contract\Tests\Acceptance\DownloadContract\DownloadContractContext
+
+    calculate_contract_with_amendment_state:
+      paths: [ '%paths.base%/components/Contract/Contract/Tests/Acceptance/CalculateContractWithAmendmentState' ]
+      contexts:
+        - Components\Contract\Contract\Tests\Acceptance\CalculateContractWithAmendmentState\CalculateContractWithAmendmentStateContext
+
+    associate_mission_to_contract:
+      paths: [ '%paths.base%/components/Contract/Contract/Tests/Acceptance/AssociateMissionToContract' ]
+      contexts:
+        - Components\Contract\Contract\Tests\Acceptance\AssociateMissionToContract\AssociateMissionToContractContext
+
+    reorder_contract_parts:
+      paths: [ '%paths.base%/components/Contract/Contract/Tests/Acceptance/ReorderContractParts' ]
+      contexts:
+        - Components\Contract\Contract\Tests\Acceptance\ReorderContractParts\ReorderContractPartsContext
+
+    unpublish_contract_model:
+      paths: [ '%paths.base%/components/Contract/Model/Tests/Acceptance/UnpublishContractModel' ]
+      contexts:
+        - Components\Contract\Model\Tests\Acceptance\UnpublishContractModel\UnpublishContractModelContext
+
+    archive_contract_model:
+      paths: [ '%paths.base%/components/Contract/Model/Tests/Acceptance/ArchiveContractModel' ]
+      contexts:
+        - Components\Contract\Model\Tests\Acceptance\ArchiveContractModel\ArchiveContractModelContext
+
+    add_contract_part_to_signed_contract:
+      paths: [ '%paths.base%/components/Contract/Contract/Tests/Acceptance/AddContractPartToSignedContract']
+      contexts:
+        - Components\Contract\Contract\Tests\Acceptance\AddContractPartToSignedContract\AddContractPartToSignedContractContext
+
+    create_work_field:
+      paths: [ '%paths.base%/components/Enterprise/WorkField/Tests/Acceptance/CreateWorkField' ]
+      contexts:
+        - Components\Enterprise\WorkField\Tests\Acceptance\CreateWorkField\CreateWorkFieldContext
+
+    attach_contributor_to_work_field:
+      paths: [ '%paths.base%/components/Enterprise/WorkField/Tests/Acceptance/AttachContributorToWorkField']
+      contexts:
+        - Components\Enterprise\WorkField\Tests\Acceptance\AttachContributorToWorkField\AttachContributorToWorkFieldContext
+
+    edit_work_field:
+      paths: [ '%paths.base%/components/Enterprise/WorkField/Tests/Acceptance/EditWorkField']
+      contexts:
+        - Components\Enterprise\WorkField\Tests\Acceptance\EditWorkField\EditWorkFieldContext
+
+    show_work_field:
+      paths: [ '%paths.base%/components/Enterprise/WorkField/Tests/Acceptance/ShowWorkField']
+      contexts:
+        - Components\Enterprise\WorkField\Tests\Acceptance\ShowWorkField\ShowWorkFieldContext
+
+    detach_contributor_to_work_field:
+      paths: [ '%paths.base%/components/Enterprise/WorkField/Tests/Acceptance/DetachContributorToWorkField']
+      contexts:
+        - Components\Enterprise\WorkField\Tests\Acceptance\DetachContributorToWorkField\DetachContributorToWorkFieldContext
+
+    delete_work_field:
+      paths: [ '%paths.base%/components/Enterprise/WorkField/Tests/Acceptance/DeleteWorkField']
+      contexts:
+        - Components\Enterprise\WorkField\Tests\Acceptance\DeleteWorkField\DeleteWorkFieldContext
+
+    list_work_field:
+      paths: [ '%paths.base%/components/Enterprise/WorkField/Tests/Acceptance/ListWorkField']
+      contexts:
+        - Components\Enterprise\WorkField\Tests\Acceptance\ListWorkField\ListWorkFieldContext
+
+    archive_work_field:
+      paths: [ '%paths.base%/components/Enterprise/WorkField/Tests/Acceptance/ArchiveWorkField']
+      contexts:
+        - Components\Enterprise\WorkField\Tests\Acceptance\ArchiveWorkField\ArchiveWorkFieldContext
+
+    create_business_turnover:
+      paths: [ '%paths.base%/components/Enterprise/BusinessTurnover/Tests/Acceptance/CreateBusinessTurnover' ]
+      contexts:
+        - Components\Enterprise\BusinessTurnover\Tests\Acceptance\CreateBusinessTurnover\CreateBusinessTurnoverContext
+
+    create_specific_document_for_contract_model:
+      paths: [ '%paths.base%/components/Contract/Model/Tests/Acceptance/CreateSpecificDocumentForContractModel']
+      contexts:
+        - Components\Contract\Model\Tests\Acceptance\CreateSpecificDocumentForContractModel\CreateSpecificDocumentForContractModelContext
+
+    archive_contract:
+      paths: [ '%paths.base%/components/Contract/Contract/Tests/Acceptance/ArchiveContract' ]
+      contexts:
+        - Components\Contract\Contract\Tests\Acceptance\ArchiveContract\ArchiveContractContext
+
+    # Components\Mission\Offer
+
+    create_construction_offer:
+      paths: [ '%paths.base%/components/Mission/Offer/Tests/Acceptance/CreateConstructionOffer']
+      contexts:
+        - Components\Mission\Offer\Tests\Acceptance\CreateConstructionOffer\CreateConstructionOfferContext
+
+    list_offer:
+      paths: [ '%paths.base%/components/Mission/Offer/Tests/Acceptance/ListOffer']
+      contexts:
+        - Components\Mission\Offer\Tests\Acceptance\ListOffer\ListOfferContext
+
+    close_offer:
+      paths: [ '%paths.base%/components/Mission/Offer/Tests/Acceptance/CloseOffer']
+      contexts:
+        - Components\Mission\Offer\Tests\Acceptance\CloseOffer\CloseOfferContext
+
+    edit_construction_offer:
+      paths: [ '%paths.base%/components/Mission/Offer/Tests/Acceptance/EditConstructionOffer']
+      contexts:
+        - Components\Mission\Offer\Tests\Acceptance\EditConstructionOffer\EditConstructionOfferContext
+
+    send_offer_to_enterprise:
+      paths: [ '%paths.base%/components/Mission/Offer/Tests/Acceptance/SendOfferToEnterprise']
+      contexts:
+        - Components\Mission\Offer\Tests\Acceptance\SendOfferToEnterprise\SendOfferToEnterpriseContext
+
+    create_construction_response:
+      paths: [ '%paths.base%/components/Mission/Offer/Tests/Acceptance/CreateConstructionResponse']
+      contexts:
+        - Components\Mission\Offer\Tests\Acceptance\CreateConstructionResponse\CreateConstructionResponseContext
+
+    show_construction_response:
+      paths: [ '%paths.base%/components/Mission/Offer/Tests/Acceptance/ShowConstructionResponse']
+      contexts:
+        - Components\Mission\Offer\Tests\Acceptance\ShowConstructionResponse\ShowConstructionResponseContext
+
+    show_construction_offer:
+      paths: [ '%paths.base%/components/Mission/Offer/Tests/Acceptance/ShowConstructionOffer']
+      contexts:
+        - Components\Mission\Offer\Tests\Acceptance\ShowConstructionOffer\ShowConstructionOfferContext
+
+    list_response:
+      paths: [ '%paths.base%/components/Mission/Offer/Tests/Acceptance/ListResponse']
+      contexts:
+        - Components\Mission\Offer\Tests\Acceptance\ListResponse\ListResponseContext
+
+    delete_offer:
+      paths: [ '%paths.base%/components/Mission/Offer/Tests/Acceptance/DeleteOffer']
+      contexts:
+        - Components\Mission\Offer\Tests\Acceptance\DeleteOffer\DeleteOfferContext
+
+    # Components\Mission\Mission
+    show_construction_mission:
+      paths: [ '%paths.base%/components/Mission/Mission/Tests/Acceptance/ShowConstructionMission']
+      contexts:
+        - Components\Mission\Mission\Tests\Acceptance\ShowConstructionMission\ShowConstructionMissionContext
+
+    edit_construction_mission:
+      paths: [ '%paths.base%/components/Mission/Mission/Tests/Acceptance/EditConstructionMission']
+      contexts:
+        - Components\Mission\Mission\Tests\Acceptance\EditConstructionMission\EditConstructionMissionContext
+
+    create_construction_mission:
+      paths: [ '%paths.base%/components/Mission/Mission/Tests/Acceptance/CreateConstructionMission']
+      contexts:
+        - Components\Mission\Mission\Tests\Acceptance\CreateConstructionMission\CreateConstructionMissionContext
+
+    # --------------------------------------------------------------------------
+    # Components\Enterprise\AccountExpense
+    # --------------------------------------------------------------------------
+    create_accounting_expense:
+      paths: [ '%paths.base%/components/Enterprise/AccountingExpense/Tests/Acceptance/CreateAccountingExpense' ]
+      contexts:
+        - Components\Enterprise\AccountingExpense\Tests\Acceptance\CreateAccountingExpense\CreateAccountingExpenseContext
+
+    delete_accounting_expense:
+      paths: [ '%paths.base%/components/Enterprise/AccountingExpense/Tests/Acceptance/DeleteAccountingExpense' ]
+      contexts:
+        - Components\Enterprise\AccountingExpense\Tests\Acceptance\DeleteAccountingExpense\DeleteAccountingExpenseContext
+
+    edit_accounting_expense:
+      paths: [ '%paths.base%/components/Enterprise/AccountingExpense/Tests/Acceptance/EditAccountingExpense' ]
+      contexts:
+        - Components\Enterprise\AccountingExpense\Tests\Acceptance\EditAccountingExpense\EditAccountingExpenseContext
+
+    list_accounting_expense:
+      paths: [ '%paths.base%/components/Enterprise/AccountingExpense/Tests/Acceptance/ListAccountingExpense' ]
+      contexts:
+        - Components\Enterprise\AccountingExpense\Tests\Acceptance\ListAccountingExpense\ListAccountingExpenseContext
+
+    create_document_type_reject_reason:
+      paths: [ '%paths.base%/components/Enterprise/Document/Tests/Acceptance/CreateDocumentTypeRejectReason' ]
+      contexts:
+        - Components\Enterprise\Document\Tests\Acceptance\CreateDocumentTypeRejectReason\CreateDocumentTypeRejectReasonContext
+
+    delete_document_type_reject_reason:
+      paths: [ '%paths.base%/components/Enterprise/Document/Tests/Acceptance/DeleteDocumentTypeRejectReason' ]
+      contexts:
+        - Components\Enterprise\Document\Tests\Acceptance\DeleteDocumentTypeRejectReason\DeleteDocumentTypeRejectReasonContext
+
+    update_document_type_reject_reason:
+      paths: [ '%paths.base%/components/Enterprise/Document/Tests/Acceptance/UpdateDocumentTypeRejectReason' ]
+      contexts:
+        - Components\Enterprise\Document\Tests\Acceptance\UpdateDocumentTypeRejectReason\UpdateDocumentTypeRejectReasonContext
+
+    list_document_type_reject_reason:
+      paths: [ '%paths.base%/components/Enterprise/Document/Tests/Acceptance/ListDocumentTypeRejectReason' ]
+      contexts:
+        - Components\Enterprise\Document\Tests\Acceptance\ListDocumentTypeRejectReason\ListDocumentTypeRejectReasonContext
+
+    create_document_type_model:
+      paths: ['%paths.base%/components/Enterprise/DocumentTypeModel/Tests/CreateDocumentTypeModel']
+      contexts:
+        - Components\Enterprise\DocumentTypeModel\Tests\CreateDocumentTypeModel\CreateDocumentTypeModelContext
+
+    list_document_type_model:
+      paths: ['%paths.base%/components/Enterprise/DocumentTypeModel/Tests/ListDocumentTypeModel']
+      contexts:
+        - Components\Enterprise\DocumentTypeModel\Tests\ListDocumentTypeModel\ListDocumentTypeModelContext
+
+    delete_document_type_model:
+      paths: ['%paths.base%/components/Enterprise/DocumentTypeModel/Tests/DeleteDocumentTypeModel']
+      contexts:
+        - Components\Enterprise\DocumentTypeModel\Tests\DeleteDocumentTypeModel\DeleteDocumentTypeModelContext
+
+    edit_document_type_model:
+      paths: ['%paths.base%/components/Enterprise/DocumentTypeModel/Tests/EditDocumentTypeModel']
+      contexts:
+        - Components\Enterprise\DocumentTypeModel\Tests\EditDocumentTypeModel\EditDocumentTypeModelContext
+
+    publish_document_type_model:
+      paths: [ '%paths.base%/components/Enterprise/DocumentTypeModel/Tests/PublishDocumentTypeModel' ]
+      contexts:
+        - Components\Enterprise\DocumentTypeModel\Tests\PublishDocumentTypeModel\PublishDocumentTypeModelContext
+
+    unpublish_document_type_model:
+      paths: [ '%paths.base%/components/Enterprise/DocumentTypeModel/Tests/UnpublishDocumentTypeModel' ]
+      contexts:
+        - Components\Enterprise\DocumentTypeModel\Tests\UnpublishDocumentTypeModel\UnpublishDocumentTypeModelContext
+
+    show_document_type_model:
+      paths: [ '%paths.base%/components/Enterprise/DocumentTypeModel/Tests/ShowDocumentTypeModel' ]
+      contexts:
+        - Components\Enterprise\DocumentTypeModel\Tests\ShowDocumentTypeModel\ShowDocumentTypeModelContext
+
+    edit_document_type_model_variable:
+      paths: ['%paths.base%/components/Enterprise/DocumentTypeModel/Tests/EditDocumentTypeModelVariable']
+      contexts:
+        - Components\Enterprise\DocumentTypeModel\Tests\EditDocumentTypeModelVariable\EditDocumentTypeModelVariableContext
+
+    list_companies:
+      paths: [ '%paths.base%/components/Enterprise/Enterprise/Tests/Acceptance/ListCompanies' ]
+      contexts:
+        - Components\Enterprise\Enterprise\Tests\Acceptance\ListCompanies\ListCompaniesContext
+
+    show_company:
+      paths: [ '%paths.base%/components/Enterprise/Enterprise/Tests/Acceptance/ShowCompany' ]
+      contexts:
+        - Components\Enterprise\Enterprise\Tests\Acceptance\ShowCompany\ShowCompanyContext
+
+    delete_received_payment:
+      paths: [ '%paths.base%/components/Billing/PaymentOrder/Tests/Acceptance/DeleteReceivedPayment' ]
+      contexts:
+        - Components\Billing\PaymentOrder\Tests\Acceptance\DeleteReceivedPayment\DeleteReceivedPaymentContext
+
+    create_annex:
+      paths: [ '%paths.base%/components/Contract/Contract/Tests/Acceptance/CreateAnnex' ]
+      contexts:
+        - Components\Contract\Contract\Tests\Acceptance\CreateAnnex\CreateAnnexContext
+
+    delete_annex:
+      paths: [ '%paths.base%/components/Contract/Contract/Tests/Acceptance/DeleteAnnex' ]
+      contexts:
+        - Components\Contract\Contract\Tests\Acceptance\DeleteAnnex\DeleteAnnexContext
+
+    list_annex_as_support:
+      paths: [ '%paths.base%/components/Contract/Contract/Tests/Acceptance/ListAnnexAsSupport' ]
+      contexts:
+        - Components\Contract\Contract\Tests\Acceptance\ListAnnexAsSupport\ListAnnexAsSupportContext
+
+    show_annex:
+      paths: [ '%paths.base%/components/Contract/Contract/Tests/Acceptance/ShowAnnex' ]
+      contexts:
+        - Components\Contract\Contract\Tests\Acceptance\ShowAnnex\ShowAnnexContext
+
+    associate_annex_to_contract:
+      paths: [ '%paths.base%/components/Contract/Contract/Tests/Acceptance/AssociateAnnexToContract' ]
+      contexts:
+        - Components\Contract\Contract\Tests\Acceptance\AssociateAnnexToContract\AssociateAnnexToContractContext
